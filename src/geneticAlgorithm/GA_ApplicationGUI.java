@@ -29,39 +29,24 @@ public class GA_ApplicationGUI extends javax.swing.JPanel {
 
         poolList = new javax.swing.JScrollPane();
         simulationViewPanel = new javax.swing.JPanel();
-        resetButton = new javax.swing.JButton();
         graphPanel = new javax.swing.JPanel();
         toolBar = new javax.swing.JPanel();
         b1 = new javax.swing.JToggleButton();
-        b2 = new javax.swing.JButton();
 
         poolList.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         poolList.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
         simulationViewPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        resetButton.setText("Reset simulation");
-        resetButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resetButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout simulationViewPanelLayout = new javax.swing.GroupLayout(simulationViewPanel);
         simulationViewPanel.setLayout(simulationViewPanelLayout);
         simulationViewPanelLayout.setHorizontalGroup(
             simulationViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(simulationViewPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(resetButton)
-                .addContainerGap(316, Short.MAX_VALUE))
+            .addGap(0, 437, Short.MAX_VALUE)
         );
         simulationViewPanelLayout.setVerticalGroup(
             simulationViewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(simulationViewPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(resetButton)
-                .addContainerGap(232, Short.MAX_VALUE))
+            .addGap(0, 266, Short.MAX_VALUE)
         );
 
         graphPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -80,23 +65,17 @@ public class GA_ApplicationGUI extends javax.swing.JPanel {
 
         b1.setText("b1");
 
-        b2.setText("b2");
-
         javax.swing.GroupLayout toolBarLayout = new javax.swing.GroupLayout(toolBar);
         toolBar.setLayout(toolBarLayout);
         toolBarLayout.setHorizontalGroup(
             toolBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(toolBarLayout.createSequentialGroup()
                 .addComponent(b1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(b2)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         toolBarLayout.setVerticalGroup(
             toolBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(toolBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(b1)
-                .addComponent(b2))
+            .addComponent(b1)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -131,17 +110,11 @@ public class GA_ApplicationGUI extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_resetButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JToggleButton b1;
-    public javax.swing.JButton b2;
     public javax.swing.JPanel graphPanel;
     public javax.swing.JScrollPane poolList;
-    public javax.swing.JButton resetButton;
     public javax.swing.JPanel simulationViewPanel;
     private javax.swing.JPanel toolBar;
     // End of variables declaration//GEN-END:variables

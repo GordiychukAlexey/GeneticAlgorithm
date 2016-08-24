@@ -19,5 +19,5 @@ public interface GA_I_Population {
     /**
      * заполнение пула после выборки
      */
-    public void fillPool();//public??
+    public void fillPool();
 }

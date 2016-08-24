@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package geneticAlgorithm;
 
 import algorithms.AL_Tools;
@@ -11,8 +6,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglAWTCanvas;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.math.Intersector;
-import com.badlogic.gdx.math.Polygon;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
@@ -22,7 +15,6 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import java.awt.Canvas;
-import java.awt.Graphics2D;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -33,7 +25,7 @@ import java.util.logging.Logger;
  */
 public class GA_SimulatorScene extends ApplicationAdapter implements GA_I_Simulator{
 
-    private final String modelsFilePath = "data/model2";
+    private final String modelsFilePath = "data/model4";
 
     private final float areaWidth;//ширина области размещения объектов
 
@@ -237,13 +229,10 @@ public class GA_SimulatorScene extends ApplicationAdapter implements GA_I_Simula
                 this.models.get(i).setTransform(areaWidth / 2.0f, (float) indexes.get(i), 0.0f);
                 this.models.get(i).applyLinearImpulse(0.0f, -0.01f, 0.0f, 0.0f, true);
             }
-            //System.out.println("wwwww");
             this.unfreezeModels();
             this.waitWhileModelsStopped();
             this.freezeModels();
             creatureGene =this.buildGene();
-            //creatureGene = this.clarifyGene(this.buildGene());
-        //} while (creatureGene == null);
 
         return creatureGene;
     }
@@ -351,13 +340,6 @@ public class GA_SimulatorScene extends ApplicationAdapter implements GA_I_Simula
         measuringBody.setFixedRotation(true);
         measuringBody.getFixtureList().get(0).setFriction(0.0f);
         measuringBody.setTransform(this.areaWidth / 2.0f, -1.0f * (heightOfMeasuringBody / 2.0f), 0.0f);
-//////////////////////////////        float maxBodyYPos=0;
-//////////////////////////////        for(Body model:this.models){
-//////////////////////////////            if(model.getPosition().y>maxBodyYPos){
-//////////////////////////////                maxBodyYPos=model.getPosition().y;
-//////////////////////////////            }
-//////////////////////////////        }
-//////////////////////////////measuringBody.setTransform(this.areaWidth / 2.0f, maxBodyYPos+1.0f, 0.0f);
     }
 
     private void loadModels() {
@@ -484,9 +466,7 @@ public class GA_SimulatorScene extends ApplicationAdapter implements GA_I_Simula
 
     @Override
     public void resize(int width, int height) {
-        super.resize(width, height); //To change body of generated methods, choose Tools | Templates.
-////////////        this.cam.setToOrtho(false, sceneWidth, sceneWidth * Gdx.graphics.getHeight() / Gdx.graphics.getWidth());
-////////////        SetCamera(areaWidth / 2.0f, (areaWidth) * Gdx.graphics.getHeight() / Gdx.graphics.getWidth());
+        super.resize(width, height);
 
         float viewportHeight = ((float) this.models.size() / this.areaWidth) + this.heightOfMeasuringBody + 2.0f;
         float viewportWidth = viewportHeight * ((float) Gdx.graphics.getWidth() / (float) Gdx.graphics.getHeight());

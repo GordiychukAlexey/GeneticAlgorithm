@@ -1,10 +1,9 @@
 package geneticAlgorithm;
 
 import algorithms.AL_MathFunctions;
-import algorithms.AL_Tools;
 import java.util.ArrayList;
 
-public class GA_Creature implements Comparable<GA_Creature> {//abstract
+public class GA_Creature implements Comparable<GA_Creature> {
 
     private ArrayList<ModelTransformParams> gene;
     public float fitness = 999999.0f;
@@ -15,7 +14,6 @@ public class GA_Creature implements Comparable<GA_Creature> {//abstract
 
     //породить потомка путём скрещивания
     public GA_Creature makeChild(GA_Creature partner) {
-
         return this.makeClone();
     }
 
@@ -33,25 +31,17 @@ public class GA_Creature implements Comparable<GA_Creature> {//abstract
             int temp1Index = (int) (Math.random() * (this.gene.size()));
             ModelTransformParams temp1 = this.gene.get(temp1Index);
             int temp2Index = (int) (Math.random() * (this.gene.size()));
-//            System.out.println(temp1Index + " / " + temp2Index);
             this.gene.set(temp1Index, this.gene.get(temp2Index));
             this.gene.set(temp2Index, temp1);
         }
 
-        //System.out.println("32323232323");
         for (ModelTransformParams genePart : this.gene) {
             if (Math.random() < mutationRate) {
-                //System.out.print(genePart.angle + " ");
                 float inc = (float) AL_MathFunctions.degreesToRadians(((Math.random() * 2.0) -1.0) * 180.0f);
-//                System.out.println(inc);
                 genePart.angle += inc;
 
             }
         }
-//            genePart.posX += (float) (((Math.random() * 1.0 * 2.0) - 1.0)*mutationRate);
-//            genePart.posY += (float) (((Math.random() * 1.0 * 2.0) - 1.0)*mutationRate);
-//System.out.println((Math.round((Math.random() * 2.0) - 1.0)));
-
     }
 
     public ArrayList<ModelTransformParams> getGene() {
