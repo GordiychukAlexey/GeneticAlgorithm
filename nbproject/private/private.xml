@@ -2,12 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/Документы/_JavaWorkspace/GeneticAlgorithm/src/geneticAlgorithm/GA_MainFrame.java</file>
-            <file>file:/D:/Документы/_JavaWorkspace/GeneticAlgorithm/src/geneticAlgorithm/GA_Simulator.java</file>
-            <file>file:/D:/Документы/_JavaWorkspace/GeneticAlgorithm/src/geneticAlgorithm/GA_Creature.java</file>
-            <file>file:/D:/Документы/_JavaWorkspace/GeneticAlgorithm/src/geneticAlgorithm/GA_SimulatorScene.java</file>
-            <file>file:/D:/Документы/_JavaWorkspace/GeneticAlgorithm/src/geneticAlgorithm/GA_ApplicationGUI.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
